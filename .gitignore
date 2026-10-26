@@ -1,0 +1,12 @@
+# 数据与模型不入库：体积大且原始数据版权归原作者（见 README「数据来源」）
+data/
+models/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 系统
+.DS_Store
+Thumbs.db
