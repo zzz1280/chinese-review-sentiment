@@ -14,6 +14,17 @@
 
 （±为 6 次独立微调的标准差：2 次数据抽样 × 3 个训练种子）
 
+## 训练好的模型
+
+已上传 Hugging Face：[zhuhua666/chinese-review-sentiment-roberta](https://huggingface.co/zhuhua666/chinese-review-sentiment-roberta)（Model Card 含结果、训练细节与局限性说明）
+
+```python
+from transformers import pipeline
+
+clf = pipeline('text-classification', model='zhuhua666/chinese-review-sentiment-roberta')
+clf('质量非常好，物流也快，下次还来')   # LABEL_1=好评 / LABEL_0=差评
+```
+
 ## 亮点发现
 
 1. **数据集有标签噪声**：「不错，挺实惠的」等明显好评被标为差评——模型的上限由数据质量决定，90%+ 的词袋基线已接近该数据的标签质量天花板。
